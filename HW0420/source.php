@@ -30,9 +30,7 @@ $products = array(
 );
 
 $session = new Session();
-?>
 
-<?php
 echo "Трошечки темної теми, шоб очі кайфанули <i>(напевно)</i>";
 
 $arr = array();
@@ -44,12 +42,11 @@ foreach ($products as $item) {
                 data-item='" . htmlspecialchars(json_encode($item)) . "' />                
             </form>
             <hr>";
-    array_push($arr, $item);
+            array_push($arr, $item);
 }
-?>
-<?php
+
 session_start();
-echo "<form action='cart2.php'><button>To Cart</button></form>";
+echo "<form action='cart2.php'><button type='submit'>To Cart</button></form>";
 $_SESSION['cart_arr'] = serialize($arr);
 ?>
 <script>
