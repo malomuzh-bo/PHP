@@ -6,7 +6,12 @@ class Label extends Input{
 
     public function __construct($_background, $_width, $_height, $_name, $_value, $_forObject)
     {
-        parent::__construct($_background, $_width, $_height, $_name, $_value);
+        $this -> SetBackground($_background);
+        $this -> SetWidth($_width);
+        $this -> SetHeight($_height);
+        $this -> SetName($_name);
+        $this -> SetValue($_value);
+        //parent::__construct($_background, $_width, $_height, $_name, $_value);
         $this -> for = $_forObject;
     }
 

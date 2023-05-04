@@ -5,7 +5,13 @@ class Text extends Input{
 
     public function __construct($_background, $_width, $_height, $_name, $_value, $_placeholder)
     {
-        parent::__construct($_background, $_width, $_height, $_name, $_value);
+        //нє, навіть це не допомагає. Ну його...
+        $this -> SetBackground($_background);
+        $this -> SetWidth($_width);
+        $this -> SetHeight($_height);
+        $this -> SetName($_name);
+        $this -> SetValue($_value);
+        //parent::__construct($_background, $_width, $_height, $_name, $_value);
         $this -> SetPlaceholder($_placeholder);
     }
 
