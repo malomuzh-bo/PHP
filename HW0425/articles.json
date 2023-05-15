@@ -1,0 +1,7 @@
+[   
+    {"id": 1, "header": "article1", "shortText": "short text1", "fullText": "full text1"},
+    {"id": 2, "header": "article2", "shortText": "short text2", "fullText": "full text2"},
+    {"id": 3, "header": "article3", "shortText": "short text3", "fullText": "full text3"},
+    {"id": 4, "header": "article4", "shortText": "short text4", "fullText": "full text4"},
+    {"id": 5, "header": "article5", "shortText": "short text5", "fullText": "full text5"}
+]

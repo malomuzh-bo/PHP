@@ -1,0 +1,24 @@
+[
+    {
+        "date": "20:11",
+        "items": [
+            {
+                "title": "TitleBBB",
+                "count": 999,
+                "price": 123123,
+                "total": 122999877
+            }
+        ]
+    },
+    {
+        "date": "20:13",
+        "items": [
+            {
+                "title": "Title2",
+                "count": 10,
+                "price": 200,
+                "total": 2000
+            }
+        ]
+    }
+]

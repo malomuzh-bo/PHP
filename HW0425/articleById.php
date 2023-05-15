@@ -17,19 +17,22 @@ line-height: 1.5; color: #0d1117">
 include_once 'news.php';
 include_once 'article.php';
 
-if (isset($_GET['id'])) {
-    $news = new News();
-    $article = $news -> GetArticle($_GET['id']);
+$files = file_get_contents("articles.json");
+$articles = json_decode($files, true);
+$articleObj;
 
-    if ($article != null) {
-        echo '<h1>' . $article -> GetHeader() . '</h1>';
-        echo '<p>' . $article -> GetFullText() . '</p>';
-    }
-    else {
-        echo 'Article not found.';
+if (isset($_GET['id'])) {
+    foreach ($articles as $article) {
+        if ($article['id'] == $_GET['id']) {
+            $articleObj = new Article($article['id'], $article['header'], $article['shortText'], $article['fullText']);
+            echo $articleObj -> GetHeader('gray', 20);
+            echo $articleObj -> GetFullText('black', 15) . "<hr/>";
+            return;
+        }
     }
 }
 else {
     echo 'Invalid request.';
+
 }
 ?>

@@ -3,8 +3,7 @@ include_once 'article.php';
 class News {
     public $listArticles = array();
 
-    public function AddArticle($header, $shortText, $fullText) {
-        $id = rand(1000, 9999);
+    public function AddArticle($id, $header, $shortText, $fullText) {
         $article = new Article($id, $header, $shortText, $fullText);
         array_push($this -> listArticles, $article);
     }

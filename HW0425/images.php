@@ -14,19 +14,11 @@ line-height: 1.5; color: #0d1117">
 </body>
 </html>
 <?php
-include_once 'article.php';
-include_once 'news.php';
+$files = file_get_contents("images.json");
+$images = json_decode($files, true);
 
-$news = new News();
+$amount = isset($_GET['amount']) ? $_GET['amount'] : 4;
+$page = isset($_GET['page']) ? $_GET['page'] : 1;
 
-$files = file_get_contents("articles.json");
-$articles = json_decode($files, true);
-
-foreach ($articles as $article) {
-    $news -> AddArticle($article['id'], $article['header'], $article['shortText'], $article['fullText']);
-}
-$news -> GetArticles();
-
-echo "<hr/>";
-echo "Go to <a href='images.php'>images</a>";
+$amoPages = ceil(count($images) / $amount);
 ?>
