@@ -20,7 +20,8 @@ if (isset($_GET['search'])) {
 ?>
 
 <html>
-<body style="background-color: #e6edf3; color: #1f1f1f; font-family: -apple-system,BlinkMacSystemFont,'Segoe UI','Noto Sans',Helvetica,Arial,sans-serif,'Apple Color Emoji','Segoe UI Emoji';">
+<body style="background-color: #e6edf3; color: #1f1f1f; font-family: -apple-system,BlinkMacSystemFont,'Segoe UI','Noto Sans',
+Helvetica,Arial,sans-serif,'Apple Color Emoji','Segoe UI Emoji';">
     <form method="post">
         <label>Name:</label>
         <input type="text" name="name"><br>
